@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="FlowerTest" time="0.001" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="PrimerTest" time="0.002" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="14.0.2+12-46"/>
@@ -55,10 +55,11 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
   </properties>
-  <testcase classname="FlowerTest" name="testGetPrice" time="0.001"/>
-  <testcase classname="FlowerTest" name="testGetFlower" time="0"/>
-  <testcase classname="FlowerTest" name="testSetPetals" time="0"/>
-  <testcase classname="FlowerTest" name="testGetPetals" time="0"/>
-  <testcase classname="FlowerTest" name="testSetName" time="0"/>
-  <testcase classname="FlowerTest" name="testSetPrice" time="0"/>
+  <testcase classname="PrimerTest" name="testSumOfAllPositive" time="0.002"/>
+  <testcase classname="PrimerTest" name="testIsMultiple" time="0"/>
+  <testcase classname="PrimerTest" name="testRemovePunctuations" time="0"/>
+  <testcase classname="PrimerTest" name="testSumOfAllEvenPositive" time="0"/>
+  <testcase classname="PrimerTest" name="testSumOfAllPositiveSquares" time="0"/>
+  <testcase classname="PrimerTest" name="testCountVowels" time="0"/>
+  <testcase classname="PrimerTest" name="testIsEven" time="0"/>
 </testsuite>
