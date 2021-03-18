@@ -1,4 +1,4 @@
-package com.morris.repeat;
+package com.morris.repeat.primer;
 
 /**
  * Flower has 3 attributes: it's name, number of petals and price.

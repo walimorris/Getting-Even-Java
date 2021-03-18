@@ -1,4 +1,4 @@
-import com.morris.repeat.Flower;
+import com.morris.repeat.primer.Flower;
 import org.junit.Assert;
 import org.junit.Test;
 

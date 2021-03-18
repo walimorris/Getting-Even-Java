@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="7" failures="0" name="PrimerTest" time="0.002" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="PrimerTest" time="0.003" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="14.0.2+12-46"/>
@@ -40,7 +40,7 @@
     <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
     <property name="java.vm.specification.version" value="14"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
     <property name="java.home" value="/usr/lib/jvm/java-14-oracle"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -58,7 +58,7 @@
   <testcase classname="PrimerTest" name="testSumOfAllPositive" time="0.002"/>
   <testcase classname="PrimerTest" name="testIsMultiple" time="0"/>
   <testcase classname="PrimerTest" name="testRemovePunctuations" time="0"/>
-  <testcase classname="PrimerTest" name="testSumOfAllEvenPositive" time="0"/>
+  <testcase classname="PrimerTest" name="testSumOfAllEvenPositive" time="0.001"/>
   <testcase classname="PrimerTest" name="testSumOfAllPositiveSquares" time="0"/>
   <testcase classname="PrimerTest" name="testCountVowels" time="0"/>
   <testcase classname="PrimerTest" name="testIsEven" time="0"/>
