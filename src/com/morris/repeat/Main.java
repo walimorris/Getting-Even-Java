@@ -53,5 +53,12 @@ public class Main {
         String str = "This is a string with 7 vowels";
         int sum3 = Primer.countVowels(str);
         System.out.println("Sum of vowels in " + "`" + str + "`" + ": " + sum3);
+
+        /**
+         * Transform a String value and remove all punctuations.
+         */
+        String str2 = "Let's try, Mike!";
+        String str2Value = Primer.removePunctuations(str2);
+        System.out.println(str2 + " => " + str2Value);
     }
 }

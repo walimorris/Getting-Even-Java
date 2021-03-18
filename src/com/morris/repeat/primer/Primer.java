@@ -11,9 +11,29 @@ public class Primer {
         I('i'),
         O('o'),
         U('u');
-        private int value;
+        private final int value;
 
         Vowels(char value) {
+            this.value = value;
+        }
+    }
+
+    /**
+     * Add punctuation chars as seen fit. Methods that utilize the Punctuations enum
+     * will not be negatively affected by any additions.
+     */
+    public enum Punctuations {
+        APOSTROPHE('\''),
+        COMMA(','),
+        PERIOD('.'),
+        QUESTION('?'),
+        EXCLAMATION('!'),
+        SEMICOLON(';'),
+        COLON(':');
+
+        private final int value;
+
+        Punctuations(int value) {
             this.value = value;
         }
     }
@@ -158,5 +178,24 @@ public class Primer {
             }
         }
         return sum;
+    }
+
+    /**
+     * Write a method that uses a {@link StringBuilder} instance to remove
+     * all the punctuation from a {@link String} storing a sentence.
+     * @param str : {@link String}
+     * @return : {@link String}
+     */
+    public static String removePunctuations(String str) {
+        StringBuilder string = new StringBuilder(str);
+        for ( int i = 0; i < string.length(); i++ ) {
+            char c = string.charAt(i);
+            for ( Punctuations p : Punctuations.values() ) {
+                if ( p.value == c ) {
+                    string.deleteCharAt(i);
+                }
+            }
+        }
+        return string.toString();
     }
 }
