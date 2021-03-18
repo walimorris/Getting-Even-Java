@@ -39,5 +39,19 @@ public class Main {
         int number1 = 32;
         int sum1 = Primer.sumOfAllPositives(number1);
         System.out.println("Sum of all positives of " + number1 + ": " + sum1);
+
+        /**
+         * Collect the sum of all positive squares of a number.
+         */
+        int number2 = 18;
+        int sum2 = Primer.sumOfAllPositiveSquares(number2);
+        System.out.println("Sum of all positives squares of " + number2 + ": " + sum2);
+
+        /**
+         * Collect the sum of all vowels in a string.
+         */
+        String str = "This is a string with 7 vowels";
+        int sum3 = Primer.countVowels(str);
+        System.out.println("Sum of vowels in " + "`" + str + "`" + ": " + sum3);
     }
 }

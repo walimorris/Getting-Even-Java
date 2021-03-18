@@ -5,6 +5,19 @@ import java.util.Scanner;
 public class Primer {
     public Primer() {}
 
+    public enum Vowels {
+        A('a'),
+        E('e'),
+        I('i'),
+        O('o'),
+        U('u');
+        private int value;
+
+        Vowels(char value) {
+            this.value = value;
+        }
+    }
+
     /**
      * Write a short Java method that inputs a different value of each base
      * type from the standard input device and prints its back to the standard
@@ -73,7 +86,7 @@ public class Primer {
      * Write a method that takes an integer n and returns the sum of all the odd
      * positive integers less than or equal to n.
      * @param n : integer
-     * @return int
+     * @return : int
      */
     public static int sumOfAllEvenPositives(int n) {
         int i = 0, sum = 0;
@@ -97,7 +110,7 @@ public class Primer {
      * Write a Jave method that takes an integer n and returns the sum of all
      * positive integers less than or equal to n.
      * @param n : integer
-     * @return int
+     * @return : int
      */
     public static int sumOfAllPositives(int n) {
         int i = 0, sum = 0;
@@ -107,6 +120,42 @@ public class Primer {
                 System.out.println("Even number: " + i);
             }
             i++;
+        }
+        return sum;
+    }
+
+    /**
+     * Write a short method that takes an integer n and returns the sum of the
+     * squares of all positive integers less than or equal to n.
+     * @param n : integer
+     * @return : int
+     */
+    public static int sumOfAllPositiveSquares(int n) {
+        int i = 0, sum = 0;
+        while (i <= n) {
+            if (i % 2 == 0) {
+                sum += i * i;
+                System.out.println(i + "^2: " + i * i);
+            }
+            i++;
+        }
+        return sum;
+    }
+
+    /**
+     * Write a method that counts the number of vowels in a given char string.
+     * @param str : {@link String}
+     * @return : int
+     */
+    public static int countVowels(String str) {
+        int sum = 0;
+        for ( int i = 0; i < str.length(); i++ ) {
+            char c = str.charAt(i);
+            for ( Vowels v : Vowels.values() ) {
+                if ( v.value == c ) {
+                    sum += 1;
+                }
+            }
         }
         return sum;
     }
