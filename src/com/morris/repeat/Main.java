@@ -25,5 +25,19 @@ public class Main {
             System.out.println(e + ": " + evens);
             e--;
         }
+
+        /**
+         * Collect the sum of all even positives.
+         */
+        int number0 = 20;
+        int sum0 = Primer.sumOfAllEvenPositives(number0);
+        System.out.println("Sum of all even positives of " + number0 + ": " + sum0);
+
+        /**
+         * Collect the sum of all positive numbers.
+         */
+        int number1 = 32;
+        int sum1 = Primer.sumOfAllPositives(number1);
+        System.out.println("Sum of all positives of " + number1 + ": " + sum1);
     }
 }

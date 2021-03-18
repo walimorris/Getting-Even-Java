@@ -68,4 +68,46 @@ public class Primer {
         } while ( e > 0);
         return e == 0;
     }
+
+    /**
+     * Write a method that takes an integer n and returns the sum of all the odd
+     * positive integers less than or equal to n.
+     * @param n : integer
+     * @return int
+     */
+    public static int sumOfAllEvenPositives(int n) {
+        int i = 0, sum = 0;
+        boolean skip = true;      // skip begins true to skip the first odd positive integer
+        while ( i <= n ) {
+            if (i % 2 == 0) {     // if positive, go into decision structure, else increment
+                if (!skip) {      // if even and false add n to sum and skip next positive
+                    sum += i;
+                    System.out.println("odd even: " + i);
+                    skip = true;
+                } else {
+                    skip = false; // odd positive has been skipped, don't skip next positive
+                }
+            }
+            i++;
+        }
+        return sum;
+    }
+
+    /**
+     * Write a Jave method that takes an integer n and returns the sum of all
+     * positive integers less than or equal to n.
+     * @param n : integer
+     * @return int
+     */
+    public static int sumOfAllPositives(int n) {
+        int i = 0, sum = 0;
+        while ( i <= n ) {
+            if ( i % 2 == 0 ) {
+                sum += i;
+                System.out.println("Even number: " + i);
+            }
+            i++;
+        }
+        return sum;
+    }
 }
