@@ -198,4 +198,99 @@ public class Primer {
         }
         return string.toString();
     }
+
+    /**
+     * Write a program that takes as input three integers, a, b, c, from the
+     * Java console and determines if they can be used in a correct arithmetic
+     * formula. For this method we will use these possible arthimetic operators:
+     * (+, -, *, /, %)
+     * @param x : integer
+     * @param y : integer
+     * @param z : integer
+     * @return : boolean
+     */
+    public static boolean isPossibleArithmetic(int x, int y, int z) {
+        int[] array = { x, y, z };
+        boolean isFoundFormula = isFoundArithmeticFormula(x, y, z);
+        if ( isFoundFormula ) {
+            return true;
+        } else {
+            for ( int i = 0; i < 2; i++ ) {
+                array = rotateOne(array);
+                isFoundFormula = isFoundArithmeticFormula(array[0], array[1], array[2]);
+                if ( isFoundFormula ) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Checks if any formula in the first set of permutations is valid.
+     * @param x : integer
+     * @param y : integer
+     * @param z : integer
+     * @return : boolean
+     */
+    private static boolean checkPermOne( int x, int y, int z) {
+        if ( x + y == z ) {
+            return true;
+        } else if ( x * y == z ) {
+            return true;
+        } else if ( x / y == z ) {
+            return true;
+        } else if ( x - y == z ) {
+            return true;
+        } else return x % y == z;
+    }
+
+    /**
+     * Checks if any formula in the second set of permutations is valid.
+     * @param x : integer
+     * @param y : integer
+     * @param z : integer
+     * @return : boolean
+     */
+    private static boolean checkPermTwo(int x, int y, int z) {
+        if ( x == y + z ) {
+            return true;
+        } else if ( x == y * z ) {
+            return true;
+        } else if ( x == y / z ) {
+            return true;
+        } else if ( x == y - z ) {
+            return true;
+        } else return x == y % z;
+    }
+
+    /**
+     * Roatates an array once counter clock-wise.
+     * @param array : contains 3 integers.
+     * @return int[] array
+     */
+    private static int[] rotateOne(int[] array) {
+        int[] arr = array;
+        int temp = arr[0];
+        arr[0] = arr[1];
+        arr[1] = arr[2];
+        arr[2] = temp;
+        return arr;
+    }
+
+    /**
+     * Searches through both permuataions to find a valid arithmetic formuls.
+     * @param x : integer
+     * @param y : integer
+     * @param z : integer
+     * @return boolean
+     */
+    private static boolean isFoundArithmeticFormula(int x, int y, int z) {
+        boolean isFoundFormula = checkPermOne(x, y, z);
+        boolean isFoundFormula2 = checkPermTwo(x, y, z);
+        if ( isFoundFormula || isFoundFormula2 ) {
+            return true;
+        }
+        return false;
+    }
 }

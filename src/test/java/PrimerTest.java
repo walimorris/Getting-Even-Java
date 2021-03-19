@@ -55,4 +55,12 @@ public class PrimerTest {
         String strValue = Primer.removePunctuations(str);
         Assert.assertEquals(strValue, "Lets try Mike");
     }
+
+    @Test
+    public void testIsPossibleArithmetic() {
+        boolean isPossible1 = Primer.isPossibleArithmetic(1, 2, 4);
+        boolean isPossible2 = Primer.isPossibleArithmetic(1, 2, 3);
+        Assert.assertFalse(isPossible1);
+        Assert.assertTrue(isPossible2);
+    }
 }
