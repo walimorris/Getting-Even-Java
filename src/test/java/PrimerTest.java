@@ -63,4 +63,18 @@ public class PrimerTest {
         Assert.assertFalse(isPossible1);
         Assert.assertTrue(isPossible2);
     }
+
+    @Test
+    // You can print values to review matching distinct Pairs
+    public void testIsEvenProductOfDistinctPairs() {
+        int[] array1 = {3, 7, 11, 22, 18};
+        int[] array2 = {3, 1};
+        int[] array3 = {2345};
+        boolean value1 = Primer.isEvenProductOfDistinctPairs(array1);
+        boolean value2 = Primer.isEvenProductOfDistinctPairs(array2);
+        boolean value3 = Primer.isEvenProductOfDistinctPairs(array3);
+        Assert.assertTrue(value1);
+        Assert.assertFalse(value2);
+        Assert.assertFalse(value3);
+    }
 }

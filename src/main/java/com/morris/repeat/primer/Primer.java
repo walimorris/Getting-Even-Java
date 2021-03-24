@@ -293,4 +293,29 @@ public class Primer {
         }
         return false;
     }
+
+    /**
+     * Write a Java method that takes an array of int values and determines
+     * if there is a pair of distinct elements of the array whose product
+     * is even.
+     * @param arr : array of int values
+     * @return boolean
+     */
+    public static boolean isEvenProductOfDistinctPairs(int[] arr) {
+        if (arr.length < 2) {
+            System.out.println("Not enough values to examine in the array.");
+            return false;
+        }
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] * arr[j] % 2 == 0 && arr[i] != arr[j]) {
+                    System.out.println("match: " + arr[i] + " * " + arr[j] +
+                            " = " + (arr[i] * arr[j]));
+                    return true;
+                }
+            }
+        }
+        System.out.println("No even product of distinct pairs found.");
+        return false;
+    }
 }
