@@ -318,4 +318,29 @@ public class Primer {
         System.out.println("No even product of distinct pairs found.");
         return false;
     }
+
+    /**
+     * Write a method that can take a positive integer greater than 2 as
+     * input and write out the number of times one must repeatedly divide
+     * this number by 2 before getting a value less than 2.
+     * @param n : positive number to divide
+     * @return int
+     */
+    public static int repeatedlyDivideByTwo(int n) {
+        int count = 0;
+        if (n % 2 != 0) {
+            throw new IllegalArgumentException("parameter must be positive integer.");
+        } else if (n <= 2) {
+            return 0;
+        } else {
+            double num = (double)n;
+            while (num > 2.0) {
+                num = num / 2.0;
+                count++;
+            }
+        }
+        // accounts for num being greater than two before being less than
+        // or equal to two.
+        return count - 1;
+    }
 }

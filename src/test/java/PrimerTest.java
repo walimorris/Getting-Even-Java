@@ -77,4 +77,14 @@ public class PrimerTest {
         Assert.assertFalse(value2);
         Assert.assertFalse(value3);
     }
+
+    @Test
+    public void testRepeatedlyDivideByTwo() {
+        int n1 = Primer.repeatedlyDivideByTwo(0);
+        int n2 = Primer.repeatedlyDivideByTwo(6);
+        int n3 = Primer.repeatedlyDivideByTwo(100);
+        Assert.assertEquals(0, n1);
+        Assert.assertEquals(1, n2);
+        Assert.assertEquals(5, n3);
+    }
 }
