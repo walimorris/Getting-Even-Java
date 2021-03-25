@@ -87,4 +87,14 @@ public class PrimerTest {
         Assert.assertEquals(1, n2);
         Assert.assertEquals(5, n3);
     }
+
+    @Test
+    public void testFloatArrayIsDistinct() {
+        float[] array1 = {1.2f, 3.3f, 4.5f, 12.3f};
+        float[] array2 = {12.5f, 11.2f, 5.4f, 104.3f, 5.4f};
+        boolean value1 = Primer.floatArrayIsDistinct(array1);
+        boolean value2 = Primer.floatArrayIsDistinct(array2);
+        Assert.assertTrue(value1);
+        Assert.assertFalse(value2);
+    }
 }

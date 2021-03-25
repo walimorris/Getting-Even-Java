@@ -1,6 +1,6 @@
 package com.morris.repeat.primer;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Primer {
     public Primer() {}
@@ -342,5 +342,24 @@ public class Primer {
         // accounts for num being greater than two before being less than
         // or equal to two.
         return count - 1;
+    }
+
+    /**
+     * Write a Java program that takes an array of float values and determines
+     * if all the numbers are different from each other.
+     * @param arr : array of float values
+     * @return boolean
+     */
+    public static boolean floatArrayIsDistinct(float[] arr) {
+        Set<Float> set = new HashSet<>();
+        int current = 0; // records current size of array
+        for (float f: arr) {
+            current++;
+            set.add(f);
+            if (set.size() < current) {
+                return false; // duplicate found
+            }
+        }
+        return true;
     }
 }
